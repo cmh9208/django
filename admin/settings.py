@@ -31,6 +31,10 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "blog.buser.apps.BuserConfig",
+    "movie.muser.apps.MuserConfig",
+    "hello.apps.HelloConfig",
+    "users.apps.UsersConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -75,11 +79,11 @@ WSGI_APPLICATION = "admin.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "mydb",
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "mydb",
         "USER": "root",
         "PASSWORD": "root",
-        "HOST": "mysql-container",
+        "HOST": "localhost",
         "PORT": "3306"
 
     }
