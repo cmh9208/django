@@ -12,7 +12,7 @@ from shop.suser.models import ShopSuser
 class ShopOrder(models.Model):
     use_in_migration = True
     order_id = models.AutoField(primary_key=True)
-    created_at = models.DateField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     shop_user = models.ForeignKey(ShopSuser, on_delete=models.CASCADE)
     shop_product = models.ForeignKey(ShopProduct, on_delete=models.CASCADE)

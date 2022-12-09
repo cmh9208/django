@@ -1,4 +1,4 @@
-from datetime import datetime
+
 
 from django.db import models
 
@@ -12,7 +12,7 @@ class BlogView(models.Model):
     use_in_migration = True
     view_id = models.AutoField(primary_key=True)
     title = models.TextField()
-    created_at = models.DateField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True)
 
     blog_user = models.ForeignKey(BlogBuser, on_delete=models.CASCADE)
     blog_post = models.ForeignKey(BlogPost, on_delete=models.CASCADE)

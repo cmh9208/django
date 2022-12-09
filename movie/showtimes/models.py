@@ -10,8 +10,8 @@ from movie.theaters.models import MovieTheater
 class MovieShowtime(models.Model):
     use_in_migration = True
     showtime_id = models.AutoField(primary_key=True)
-    start_time = models.DateField()
-    end_time = models.DateField()
+    start_time = models.DateTimeField(auto_now_add=True)
+    end_time = models.DateTimeField(auto_now_add=True)
 
     movie_cinema = models.ForeignKey(MovieCinema, on_delete=models.CASCADE)
     movie_movies = models.ForeignKey(Movie, on_delete=models.CASCADE)
