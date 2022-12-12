@@ -22,6 +22,7 @@ urlpatterns = [
 
     path('', hello),
     path("blog/auth/", include('blog.buser.urls')),
+    path("mplex/movies/", include('movie.movies.urls')),
 
 ]
 
