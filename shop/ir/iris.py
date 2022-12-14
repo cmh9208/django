@@ -7,6 +7,7 @@ from sklearn.preprocessing import OneHotEncoder
 
 class Iris(object):
     def __init__(self):
+        # self.iris = pd.read_csv(r'C:\Users\AIA\PycharmProjects\djangoProject\shop\ir\data\Iris.csv')
         self.iris = datasets.load_iris()
         print(f'type {type(self.iris)}')
         self._X = self.iris.data
