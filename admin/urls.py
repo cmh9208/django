@@ -25,6 +25,7 @@ urlpatterns = [
     path("mplex/movies/", include('movie.movies.urls')),
     path("blog/st/", include('blog.st.urls')),
     path("shop/ir/", include('shop.ir.urls')),
+    path("fashion/", include('fashion.urls')),
 
 
 ]

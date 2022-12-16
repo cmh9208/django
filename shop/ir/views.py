@@ -26,8 +26,8 @@ def iris(request):
     print(f'넘어온 꽃받침 폭: {sepal_width}')
     print(f'넘어온 꽃받침 길이: {sepal_length}')
     print(f'Enter show face with {request}')
-
     print(f'찾는 품종: {result}')
+
     if result == 0:
         resp = 'setosa / 부채붓꽃'
     elif result == 1:

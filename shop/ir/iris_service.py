@@ -6,7 +6,6 @@ from keras.layers import Dense
 from keras.saving.save import load_model
 from sklearn import datasets
 from sklearn.preprocessing import OneHotEncoder
-
 class IrisService(object):
     def __init__(self):
         global model, graph, target_names
@@ -17,11 +16,8 @@ class IrisService(object):
     def service_model(self, features):
         features = np.reshape(features, (1, 4))
         Y_prob = model.predict(features, verbose=0)
-        predicted = Y_prob.argmax(axis=-1)
+        predicted = Y_prob.argmax(axis=-1) # argmax(axis=-1) 차원축소
         return predicted[0]  # p-value 가 가장 높은 것
-
-
-
 
     '''
     Shape (150, 6)

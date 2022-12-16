@@ -94,13 +94,6 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\mozambique-flask-main\static\data\dam\titanic\train.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="\shop\ir\data\Iris.csv">
           <value>
             <Attribute>
