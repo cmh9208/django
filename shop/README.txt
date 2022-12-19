@@ -102,7 +102,7 @@
 # 다만 이렇게 train, test 두개로만 분리하는 것은 기초적인 수준이고,
 # 보통 현업에서 모델을 만들 때는 train, test, validation set 세개로 나눈다.
 #
-# validation dataset is a sample of data held back from training your model that is used to give an estimate of model skill while tuning model’s hyperparameters.
+# validation dataset is a sample of data held back from training your model that is used to give an estimate of model skill while tuning model’number hyperparameters.
 # The validation dataset is different from the test dataset that is also held back from the training of the model, but is instead used to give an unbiased estimate of the skill of the final tuned model when comparing or selecting between final models.
 # There is much confusion in applied machine learning about what a validation dataset is exactly and how it differs from a test dataset.
 #

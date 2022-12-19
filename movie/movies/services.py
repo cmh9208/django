@@ -206,7 +206,7 @@ class DcGan(object):
                 label.fill_(fake_label)
                 # Classify all fake batch with D
                 output = netD(fake.detach()).view(-1)
-                # Calculate D's loss on the all-fake batch
+                # Calculate D'number loss on the all-fake batch
                 errD_fake = criterion(output, label)
                 # Calculate the gradients for this batch, accumulated (summed) with previous gradients
                 errD_fake.backward()
@@ -223,14 +223,14 @@ class DcGan(object):
                 label.fill_(real_label)  # fake labels are real for generator cost
                 # Since we just updated D, perform another forward pass of all-fake batch through D
                 output = netD(fake).view(-1)
-                # Calculate G's loss based on this output
+                # Calculate G'number loss based on this output
                 errG = criterion(output, label)
                 # Calculate gradients for G
                 errG.backward()
                 D_G_z2 = output.mean().item()
                 # Update G
                 optimizerG.step()
-                # Check how the generator is doing by saving G's output on fixed_noise
+                # Check how the generator is doing by saving G'number output on fixed_noise
                 if (iters % 500 == 0) or ((epoch == num_epochs - 1) and (i == len(self.dataloader) - 1)):
                     with torch.no_grad():
                         fake = netG(fixed_noise).detach().cpu()
