@@ -27,6 +27,11 @@ urlpatterns = [
     path("shop/ir/", include('shop.ir.urls')),
     path("fashion/", include('fashion.urls')),
     path("number/", include('number.urls')),
+    path("webcrawler/", include('webcrawler.urls')),
+    path("fruits/", include('fruits.urls')),
+    path("samsung_report/", include('samsung_report.urls')),
+    path("naver_movie/", include('naver_movie.urls')),
+
 
 
 ]

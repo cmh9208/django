@@ -43,6 +43,10 @@ INSTALLED_APPS = [
     "shop",
     "fashion",
     "number",
+    "webcrawler",
+    "fruits",
+    "naver_movie",
+    "samsung_report",
     "rest_framework"
 ]
 CORS_ORIGIN_WHITELIST = ['http://127.0.0.1:8000', 'http://localhost:3000']

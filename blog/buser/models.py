@@ -8,7 +8,6 @@ from django.db import models
 class BlogBuser(models.Model):
     use_in_migration = True
     buser_id = models.AutoField(primary_key=True)
-
     email = models.TextField()
     nickname = models.TextField()
     password = models.TextField()

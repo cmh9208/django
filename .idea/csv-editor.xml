@@ -94,7 +94,28 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\naver_movie\naver_movie.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\shop\ir\data\Iris.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\webcrawler\melon_ranking.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\webcrawler\save\vs.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

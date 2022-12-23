@@ -3,6 +3,7 @@ import tensorflow as tf
 import torch
 import sklearn
 from tensorflow.python.client import device_lib
+
 if __name__ == '__main__':
     print(f'numpy version : {np.__version__}')
     print(f'tensorflow version : {tf.__version__}')

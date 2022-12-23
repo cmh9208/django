@@ -4,5 +4,6 @@ from admin.views import hello
 from blog.buser import views
 
 urlpatterns = [
-    url(r'login',views.login)
+    url(r'login',views.login),
+    url(r'signup', views.sign_up)
 ]
