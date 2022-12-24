@@ -2,7 +2,7 @@ import random
 import string
 import pandas as pd
 from sqlalchemy import create_engine
-class UserService(object):
+class BuserService(object):
     def __init__(self):
         pass
     def create_users(self):
@@ -36,5 +36,5 @@ class UserService(object):
         print(df.duplicated(['email']))
         return df
 if __name__ == '__main__':
-    s =UserService()
+    s =BuserService()
     s.create_users() # 만듬 이미 돌리지마
