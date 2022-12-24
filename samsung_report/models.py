@@ -96,13 +96,14 @@ class Service:
         # print(f'{self.freqtxt[:100]}')
         # ls = []
         x = pd.Series(dict(FreqDist(self.texts))).sort_values(ascending=False)
-        # for key, value in x.items():
-        #     ls.append({key : value})
-        # a = ls[0]
 
-        result = [{key, value} for key, value in x.items()]
-        print(result[0])
-        return result[0]
+        # [{'rank': '가능보고서위', 'title': '125'}] 구조로 맞추어 주어야 함.
+        result = [{'rank' : f'{key}위', 'title': f'{value}'} for key, value in x.items()]
+        result = [result[0]]
+        # result = [{'rank' : f'{i+1}위', 'title': f'{j}'} for i, j in enumerate(dict(FreqDist(self.texts[:1])))]
+        # print(result)
+        print(result)
+        return result
 
 
 
@@ -142,6 +143,7 @@ class Controller:
         self.service.frequent_text()
         self.entity.fname = r'C:\Users\AIA\PycharmProjects\djangoProject\samsung_report\data\D2Coding.ttf'
         # self.service.draw_wordcloud(self.entity)
+        return self.service.frequent_text()
 
 
 

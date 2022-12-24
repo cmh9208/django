@@ -28,10 +28,12 @@ from rest_framework.parsers import JSONParser
 
 
 @api_view(['GET'])
-@parser_classes([JSONParser])
 def nlp(request):
     return JsonResponse(
         {'result': Controller().data_analysis()})
+# 최종적으로 불러오는 메소드에 리턴값이 있어야함
+
+
 
 #
 # @api_view(['POST'])
